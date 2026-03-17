@@ -5,6 +5,7 @@ import { StyleSheet, KeyboardAvoidingView, ScrollView, Image } from 'react-nativ
 import { useState } from "react";
 import {Text, View, Alert, Platform, } from 'react-native';
 import React from "react";
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default function Signup() {
@@ -29,7 +30,15 @@ export default function Signup() {
                 <Input placeholder="E-mail" keyboardType='email-address'/>
                 <Input placeholder="Senha" secureTextEntry />
                 <Input placeholder="Confirmar Senha" secureTextEntry />
-                <Button title="Criar conta" onPress={() => alert("Cadastrou")}/>
+
+                <LinearGradient
+                    colors={["#0A3323", "#0a6b7f"]}
+                    start={{ x: 1, y: 0 }}
+                    end={{ x: 1, y: 0 }}
+                    style={{ borderRadius: 8, overflow: "hidden" }}
+                >
+                    <Button title="Criar conta" onPress={() => alert("Cadastrou")}/>
+                </LinearGradient>
                 </View>
                 <Text style={styles.footertext}>
                     Já tem uma conta? {""}

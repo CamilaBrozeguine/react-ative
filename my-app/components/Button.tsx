@@ -1,6 +1,8 @@
 import {Text, StyleSheet, TouchableOpacity , TouchableOpacityProps} from "react-native";
 
 
+
+
 type ButtonProps = TouchableOpacityProps & {
     title: string;
 }
@@ -18,7 +20,6 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         height: 48,
-        backgroundColor: "#8344cc",
         borderRadius: 8,
         justifyContent: "center",
         alignItems: "center",
@@ -27,5 +28,6 @@ const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 16,
         fontWeight: 600,
+        
     }
 });

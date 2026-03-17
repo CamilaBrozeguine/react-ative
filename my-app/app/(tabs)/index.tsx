@@ -6,6 +6,7 @@ import { StyleSheet, KeyboardAvoidingView, ScrollView, Image } from 'react-nativ
 import { useState } from "react";
 import {Text, View, Alert, Platform, } from 'react-native';
 import React from "react";
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default function Index() {
@@ -32,7 +33,14 @@ export default function Index() {
 
 
                     <Input placeholder="Senha" secureTextEntry  onChangeText={setPassword}/>
-                    <Button title="Entrar" onPress={ handleSignup }/>
+                    <LinearGradient
+                        colors={["#0A3323", "#0a6b7f"]}
+                        start={{ x: 1, y: 0 }}
+                        end={{ x: 1, y: 0 }}
+                        style={{ borderRadius: 8, overflow: "hidden" }}
+                    >
+                        <Button title="Entrar" onPress={ handleSignup }/>
+                    </LinearGradient>
                 </View>
                     <Text style={styles.footertext}>
                         Não tem uma conta? {""}
@@ -49,6 +57,7 @@ const styles = StyleSheet.create({
         flex: 1,
        backgroundColor: "#fdfdf0",
        padding: 32,
+       fontFamily: "Audiowide-Regular",
     },
     title: {
         fontSize: 24,
@@ -89,4 +98,5 @@ const styles = StyleSheet.create({
         paddingVertical: 4,
         borderRadius: 4,
     }
+
   });
